@@ -1,0 +1,16 @@
+body{border: 3px solid;}
+h1{
+    color: hotpink;
+    border-bottom:10px dotted hotpink;
+}
+h2{
+    font-style: italic;
+}
+.job-title{
+   color: gray; 
+   font-weight:bold;
+}
+ul{
+    border: 4px solid purple;
+    padding:10px 0px 10px 20px;
+}
