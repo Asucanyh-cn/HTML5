@@ -1,17 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
 <head>
-    <link rel="stylesheet" href="styles/cssexmple.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Navipage</title>
+    <link href="styles/navipage.css" rel="stylesheet">
+    <style>
+        body{
+            width: 900px;
+            height: 600px;
+            margin: 0 auto;
+            /* border: 5px solid red; */
+        }
+        aside{
+            border: 5px solid;
+            border-radius: 8px;
+            width: 150px;
+            height: 700px;
+            position: fixed;
+            top: 10px;
+        }
+        .aside-title{
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            width: 120px;
+            margin: 0 auto;
+            top:10px;
+        }
+        .aside-list{
+            list-style: none;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            top: 50px;
+            width: 120px;
+            line-height: 50px;
+        }
+        .aside-list > li{
+            border: 1px solid green;
+            border-radius: 5px;
+            line-height: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+
+        }
+    </style>
 </head>
 <body>
-<h1>Jane Doe</h1>
-<div class="job-title">Web Developer</div>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. </p>
-
-<h2>Contact information</h2>
-<ul>
-    <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
-    <li>Web: <a href="http://example.com">http://example.com</a></li>
-    <li>Tel: 123 45678</li>
-</ul>
+    <aside>
+        <p class="aside-title">
+            Navipage
+        </p>
+        <ul class="aside-list">
+            <li>
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>    
+                3
+            </li>
+        </ul>
+    </aside>
 </body>
+ </html>
