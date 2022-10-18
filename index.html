@@ -7,45 +7,28 @@
     <title>Navipage</title>
     <link href="styles/navipage.css" rel="stylesheet">
     <style>
-        body{
-            width: 900px;
-            height: 600px;
-            margin: 0 auto;
-            /* border: 5px solid red; */
-        }
-        aside{
-            border: 5px solid;
-            border-radius: 8px;
-            width: 150px;
+        .infobox-w{      
+            /* background: #000; */
+            width: 800px;
             height: 700px;
-            position: fixed;
-            top: 10px;
+            margin-top: 50px;
         }
-        .aside-title{
-            border: 2px solid black;
-            border-radius: 5px;
+        .infobox-w div{
+            background: white;
+            border-radius: 8px;
             text-align: center;
-            position: relative;
-            width: 120px;
-            margin: 0 auto;
-            top:10px;
+            font-weight: bold;
+            opacity: 85%;
         }
-        .aside-list{
-            list-style: none;
-            position: relative;
-            margin: 0 auto;
-            padding: 0;
-            top: 50px;
-            width: 120px;
+        .infobox-w :nth-child(1){
+            margin-top: 25px;
+            margin-bottom: 50px;
+            height: 50px;
             line-height: 50px;
         }
-        .aside-list > li{
-            border: 1px solid green;
-            border-radius: 5px;
-            line-height: 20px;
-            text-align: center;
-            margin-bottom: 25px;
-
+        .infobox-w :nth-child(2){
+            height: 575px;
+            line-height: 50px;
         }
     </style>
 </head>
@@ -56,15 +39,23 @@
         </p>
         <ul class="aside-list">
             <li>
-                1
+                <a href="">Works</a>
             </li>
             <li>
-                2
+                <a href="">Collections</a>
             </li>
             <li>    
-                3
+                <a href="">Links</a>
             </li>
         </ul>
     </aside>
+    <article class="infobox-w">
+        <div>
+            Works
+        </div>
+        <div>
+            1
+        </div>
+    </article>
 </body>
  </html>
