@@ -20,7 +20,7 @@ aside{
     /* border: 5px solid; */
     background: #F08080;
     border-radius: 8px;
-    width: 150px;
+    width: 300px;
     height: 700px;
     margin: 50px;
     /* position: fixed;
@@ -28,7 +28,7 @@ aside{
     left: 15%; */
     
     text-align: center;
-    line-height: 60px;
+    line-height: 80px;
     font-weight: bold;
 }
 .aside-title{
@@ -38,10 +38,10 @@ aside{
 
     border-radius: 5px;
     position: relative;
-    width: 120px;
-    height: 60px;
+    width: 240px;
+    height: 80px;
     margin: 0 auto;
-    top:20px;
+    top: 30px;
 }
 .aside-list{
     list-style: none;
