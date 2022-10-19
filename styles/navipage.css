@@ -8,59 +8,101 @@ html{
     background-image: linear-gradient(45deg,#87CEFA,#8A2BE2);
 }
 body{
+    color: white;
     margin: 0 auto;
-    /* background-color: #fff; */
-    /* border: 5px solid red; */
+    width: 1000px;
     border-radius: 12px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-row-gap: 10px;
+    display: flex;
+    flex-direction: row;
 }
 aside{
     /* border: 5px solid; */
-    background: #F08080;
+    background: white;
     border-radius: 8px;
-    width: 300px;
+    width: 400px;
     height: 700px;
     margin: 50px;
-    /* position: fixed;
-    top: 20px;
-    left: 15%; */
-    
+
     text-align: center;
     line-height: 80px;
     font-weight: bold;
+
+    /* background-attachment: fixed;
+    filter: blur(1px); */
+    opacity: 80%;
 }
 .aside-title{
     /* border: 2px solid black; */
-    background: white;
+    background: blueviolet;
     opacity: 85%;
+    border-radius: 100px;
 
-    border-radius: 5px;
     position: relative;
-    width: 240px;
+    width: 120px;
     height: 80px;
     margin: 0 auto;
     top: 30px;
 }
 .aside-list{
+    /* background: #000; */
     list-style: none;
     position: relative;
     margin: 0 auto;
     padding: 0;
-    top: 50px;
-    width: 120px;
+    width: 200px;
+    top: 100px;
 }
 .aside-list > li{
     /* border: 1px solid green; */
-    background: white;
     opacity: 85%;
+    background:blueviolet;
 
     border-radius: 5px;
-    line-height: 30px;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
     margin-bottom: 25px;
 }
 .aside-list a{
     text-decoration: none;
+    color: white;
 }
+        .infobox-w{      
+            /* background: #000; */
+            width: 800px;
+            height: 700px;
+            margin-top: 50px;
+        }
+        .infobox-w div{
+            color: black;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            opacity: 80%;
+        }
+        .infobox-w div:nth-child(1){
+            margin-top: 25px;
+            margin-bottom: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .infobox-w div:nth-child(2){
+            height: 575px;
+            padding: 0 50px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+        }
+        .infobox-w div:nth-child(2) a{
+            background:blue;
+            color: wheat;
+            border-radius: 12px;
+
+            height: 35px;
+            line-height: 35px;
+            margin-top: 50px;
+            
+        }
