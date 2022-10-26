@@ -49,7 +49,7 @@ aside {
     top: 30px;
 }
 
-.aside-list {
+.aside-list{
     /* background: #000; */
     list-style: none;
     position: relative;
@@ -85,18 +85,18 @@ aside {
 .aside-list li:hover{
     background: white;
     color: #8A2BE2;
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.infobox-w {
+.infobox-w{
     /* background: #000; */
     width: 800px;
     height: 700px;
     margin-top: 50px;
 }
 
-.infobox-w div {
+.infobox-w>div{
     color: black;
     background: white;
     border-radius: 8px;
@@ -105,23 +105,24 @@ aside {
     opacity: 80%;
 }
 
-.infobox-w div:nth-child(1) {
+.infobox-w>div:nth-child(1) {
     margin-top: 25px;
     margin-bottom: 50px;
     height: 50px;
     line-height: 50px;
 }
 
-.infobox-w div:nth-child(2) {
+.infobox-w>div:nth-child(2) {
     height: 575px;
     padding: 0 50px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0px;
     grid-gap: 30px;
 }
 
-.infobox-w div:nth-child(2) a{
+.infobox-w>div:nth-child(2)>a{
     color: blueviolet;
     border-radius: 12px;
     font-weight: bold;
@@ -131,7 +132,7 @@ aside {
     margin-top: 50px;
 
     top: 0px;
-    transition: 1s;
+    transition: 0.2s;
 }
 a{
     text-decoration: none;
@@ -140,5 +141,8 @@ a{
 .infobox-w>div:nth-child(2)>a:hover{
     position: relative;
     top:-10px;
-    transition: 1s;
+    transition: 0.2s;
+}
+.infobox-w .infobox-tag{
+    grid-column: 1/4;
 }

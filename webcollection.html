@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>webcollection</title>
+</head>
+	
+<body>
+	<!--用于Markdown文档-->
+	<!--实现功能：列举网站，实现点击跳转，悬停动画-->
+	<style>
+  		.col-0{
+			text-align: center;
+			width: 50%;
+			float: left;
+			position: relative;
+    		min-height: 1px;
+   			padding-left: 15px;
+    		padding-right: 15px;
+		}
+		.box-ctt{
+			padding: 15px;
+			background-color: white;
+			height: 86px;
+			border-radius: 4px;
+			border: 1px solid #e4ecf3;
+			margin: 10px 0 0 0;
+			box-sizing: border-box;
+		}
+		.box-ctt:hover{
+			transform: translateY(-6px);
+			box-shadow: 0 26px 40px -24px rgb(0 36 100 / 30%);
+			transition: all .3s ease;	
+		}
+		.ctt img{
+			float: left;
+			display: block;
+			margin: 0 10px 0 0 !important;
+			border: 0;
+			box-sizing: border-box;
+		}
+		.ctt-text a{    
+			color: #373e4a;
+			text-decoration: none;
+		}
+		.img-circle{
+			padding: 7px 0;
+			border-radius: 50%;
+		    vertical-align: center;
+		}
+		.overflowClip_1 {
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    		display: -webkit-box;
+    		-webkit-line-clamp: 1;
+    		-webkit-box-orient: vertical;
+}
+		.overflowClip_2 {
+    		overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+    		-webkit-line-clamp: 2;
+    		-webkit-box-orient: vertical;
+		
+}
+	</style>
+	<!---->
+	<div class="col-0">
+		<div class="box-ctt">
+			<div class="ctt"> <img data-src="https://ae01.alicdn.com/kf/Hf5e27f5664224eb191b198587dbc66e11.png" class="img-circle" width="40px" src="https://ae01.alicdn.com/kf/Hf5e27f5664224eb191b198587dbc66e11.png" data-loaded="true">
+			  <div class="ctt-text">
+				  <a class="overflowClip_1">	
+					  <strong>百度统计</strong>
+				  </a>
+			    <p class="overflowClip_2">一个工具站</p>
+			  </div>
+		  </div>
+		</div>
+	</div>
+	<!---->
+</body>
+</html>
