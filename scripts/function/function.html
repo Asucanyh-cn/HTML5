@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <script type="text/javascript">
+
+    setInterval(showDate,1000)
+    function showDate(){
+        var date=new Date()
+        var y=date.getFullYear()
+        var m=date.getMonth()
+        var d=date.getDay()
+        var h=date.getHours()
+        var min=date.getMinutes()
+        var sec=date.getSeconds()
+        document.getElementById("date").innerHTML=y+'年'+m+'月'+d+'日'+'<br>'+h+':'+min+':'+sec
+    }
+    /**分隔**/
+    function callback(){
+        document.getElementById("demo").innerHTML='我是回调函数'
+    }
+    function mainfunc(fb){
+        fb()
+    }
+</script>
+    </head>
+    <body>
+        <div id="date"></div>
+        <hr>
+        <b id="demo" onclick="mainfunc(callback)">点我</b>
+    </body>
+</html>
