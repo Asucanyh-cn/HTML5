@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .input-box{
+            margin: 100px auto;
+            width: 250px;
+        }
+        .input-box textarea{
+            width: 250px;
+            height: 100px;
+        }
+
+        .bottom{
+            float: right;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="input-box">
+
+      <textarea maxlength="200"></textarea>
+
+      <div class="bottom">
+        <span>0</span>
+        <span>/200</span>
+        <button>发布</button>
+      </div>
+    </div>
+
+    <script>
+        let text=document.querySelector('textarea')
+        let count=document.querySelector('span:nth-child(1)')
+
+        text.addEventListener('input',function(){
+            count.innerHTML=text.value.length
+        })
+</script>
+  </body>
+</html>

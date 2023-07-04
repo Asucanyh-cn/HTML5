@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 
+实现步骤：
+1.准备图片√
+2.准备数据√
+3.页面布局，样式设置√
+4.轮播逻辑，设置间隙函数，设置用户时间
+4.1获取标签替换属性值
+4.2当替换完最后的图片时重头开始
+4.3当用户鼠标放置在轮播图上时，暂停(focus事件和focusout事件)
+ -->
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+      let data = [
+        {
+          src: "images/curl.png",
+          title: "第一张是curl图片",
+        },
+        {
+          src: "images/git.png",
+          title: "第二张是git图片",
+        },
+      ];
+      
+      let i = 0;
+      let total = 2;
+      function changePicture() {
+          let pic = document.querySelector(".img-box img");
+          let tips = document.querySelector(".title h3");
+          pic.src = data[i].src;
+        tips.innerHTML = data[i].title;
+        i===total-1?i=0:i++
+      }
+      let timer = setInterval(changePicture, 1000);
+      </script>
+    <style>
+      * {
+        margin: 0;
+      }
+      .img-box {
+        margin: 0 auto;
+        width: 300px;
+        background-color: white;
+        /* border: red solid; */
+      }
+      .img-box img {
+        width: 300px;
+        height: 130px;
+      }
+      .title {
+        height: 20px;
+        /* border: blue solid; */
+        background-color: silver;
+      }
+      h3 {
+        display: inline;
+        line-height: 1px;
+      }
+    </style>
+  </head>
+
+  <body bgcolor="yellow">
+    <div class="img-box">
+      <img src="images/spring.jpg" />
+      <div class="title"><h3>这是一段描述文字</h3></div>
+    </div>
+    <script>
+      let imgBox = document.querySelector(".img-box img");
+      imgBox.addEventListener("mouseenter",function(){
+        clearInterval(timer);
+      });
+      imgBox.addEventListener("mouseout", function(){
+        timer = setInterval(changePicture, 1000);
+      });
+    </script>
+  </body>
+</html>

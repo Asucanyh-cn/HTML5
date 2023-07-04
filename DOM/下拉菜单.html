@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .menu {
+        position: relative;
+        margin: 100px auto;
+        width: 200px;
+      }
+      input {
+        width: 200px;
+      }
+      ul {
+        position: absolute;
+        list-style-type: none;
+        display: none;
+        border: 1px red solid;
+      }
+      li {
+        top: 100px;
+        /* border: 1px black solid; */
+        width: 200px;
+      }
+      li:hover{
+        background: #999999;
+      }
+      a {
+        text-decoration: none;
+        width: 200px;
+      }
+    </style>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <input type="text" value="A" />
+      <ul>
+        <li><a href="#">B</a></li>
+        <li><a href="#">c</a></li>
+        <li><a href="#">D</a></li>
+        <li><a href="#">E</a></li>
+        <li><a href="#">F</a></li>
+      </ul>
+    </div>
+    <script>
+      function showList() {
+        let list = document.querySelector("ul");
+        list.style.display = "block";
+      }
+      function hideList() {
+        let list = document.querySelector("ul");
+        list.style.display = "none";
+      }
+      let form = document.querySelector("input");
+      form.addEventListener("focus", showList);
+      form.addEventListener("blur", hideList);
+    </script>
+  </body>
+</html>

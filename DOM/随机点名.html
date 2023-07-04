@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <button>开始点名</button>
+    <p></p>
+    <script type="text/javascript">
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+      }
+      let nameList = ["a", "b", "c"];
+      let btn = document.querySelector("button");
+      let name = document.querySelector("p");
+      btn.addEventListener("click", function () {
+        let i = getRandom(0, nameList.length - 1);
+        if (nameList.length === 0) {
+          name.innerHTML = "已经全部点完！";
+          btn.disabled = true;
+        } else {
+          name.innerHTML = nameList[i];
+        }
+        nameList.splice(i, 1);
+      });
+    </script>
+  </body>
+</html>

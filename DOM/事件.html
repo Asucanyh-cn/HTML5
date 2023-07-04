@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <div>
+      <button>开启/隐藏</button>
+      <h1>我是一段测试文本</h1>
+      <script type="text/javascript">
+        let flag=1
+        function closeOrShow() {
+          let text = document.querySelector("h1");
+          if(flag===1){
+            text.style.display='none'
+            flag=0
+          }else{
+            text.style.display='block'
+            flag=1
+          }
+        }
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", closeOrShow);
+      </script>
+    </div>
+  </body>
+</html>
