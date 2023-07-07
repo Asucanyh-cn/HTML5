@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript"></script>
+    <style>
+      .table-box table {
+        border: 1px solid #c0c0c0;
+        border-spacing: 0;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 100px auto;
+        width: 500px;
+      }
+      .table-box table td {
+        border: 1px solid #c0c0c0;
+      }
+      .table-box table tr:nth-child(1) {
+        background: #9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-box">
+      <table cellspacing="0" rule="all">
+        <tr class="first-row">
+          <th><input type="checkbox" /><span>全选</span></th>
+          <th>商品</th>
+          <th>商家</th>
+          <th>价格</th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>A</td>
+          <td>TOM</td>
+          <td>5656</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td>B</td>
+          <td>Marry</td>
+          <td>544</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let checkAll = document.querySelector(".first-row input");
+      let text = document.querySelector(".first-row span");
+      let checkBoxs = document.querySelectorAll("td input");
+      checkAll.addEventListener("click", function () {
+        if (checkAll.checked === true) {
+          text.innerHTML = "取消";
+          checkBoxs.forEach(function (item) {
+            item.checked = true;
+          });
+        } else {
+          text.innerHTML = "全选";
+          checkBoxs.forEach(function (item) {
+            item.checked = false;
+          });
+        }
+      });
+      for (let i = 0; i < checkBoxs.length; i++) {
+        checkBoxs[i].addEventListener("click", function () {
+          for (let j = 0; j < checkBoxs.length; j++) {
+            if (checkBoxs[j].checked === false) {
+              checkAll.checked = false;
+              text.innerHTML = "全选";
+              return;
+            }
+          }
+          checkAll.checked = true;
+          text.innerHTML = "取消";
+        });
+      }
+    </script>
+  </body>
+</html>
