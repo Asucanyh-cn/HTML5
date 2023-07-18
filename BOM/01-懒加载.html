@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box"></div>
+    <span>100</span>
+    <script>
+        // window.addEventListener('load',function(){
+        //     let head=document.querySelector('head');
+
+        //     let link=document.createElement('link');
+        //     link.href='../styles/layout.css';
+        //     link.rel='stylesheet';
+        //     head.appendChild(link)
+
+        //     let script=document.createElement('script');
+        //     script.src='../scripts/countdown.js';
+        //     head.appendChild(script)
+        // })
+        document.addEventListener('DOMContentLoaded', function () {
+                let head=document.querySelector('head');
+
+                let link=document.createElement('link');
+                link.href='../styles/layout.css';
+                link.rel='stylesheet';
+                head.appendChild(link)
+
+                let script=document.createElement('script');
+                script.src='../scripts/countdown.js';
+                head.appendChild(script)
+        })
+    </script>
+</body>
+<!-- <link href="../styles/layout.css" rel="stylesheet"> -->
+<!-- <script src="../scripts/countdown.js"></script> -->
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript"></script>
+    <style>
+        .pink {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>第一个</button>
+    <button>第二个</button>
+    <button>第三个</button>
+    <button>第四个</button>
+    <script>
+        let btnAll = document.querySelectorAll("button");
+        btnAll.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                btnAll.forEach(function (btn) {
+                    btn.classList.remove("pink");
+                });
+                this.classList.add("pink");
+                //等同于
+                // btn.classList.add('pink');
+            })
+        });
+    </script>
+</body>
+
+</html>

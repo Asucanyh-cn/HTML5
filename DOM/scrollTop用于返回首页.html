@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            width: 500px;
+            height: 1500px;
+            background: pink;
+            margin: 0 auto;
+        }
+        .back2top{
+            position: fixed;
+            bottom: 60px;
+            left: 85%;
+            display: none;
+            width: 70px;
+            height: 25px;
+            z-index: 1;
+        }
+        .back2top a{
+            cursor:pointer;
+            display: block;
+            width: 70px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    </div>
+    <div class="back2top">
+        <a>返回顶部</a>
+    </div>
+    <script>
+        let html=document.documentElement;
+        let back2top=document.querySelector('.back2top');
+        window.addEventListener('scroll',function(){
+            let top=html.scrollTop;
+            console.log(top);
+            if(top>=500){
+                back2top.style.display='block';
+            }else{
+                back2top.style.display='none';
+            }
+        })
+        back2top.addEventListener('click',function(){
+            html.scrollTop=0;
+        })
+
+    </script>
+</body>
+</html>

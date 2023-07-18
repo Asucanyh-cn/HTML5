@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .info-box {
+            margin: 100px auto;
+            width: 300px;
+        }
+
+        span {
+            float: left;
+            width: 100px;
+            height: 28px;
+            border: 1px black solid;
+            text-align: center;
+        }
+
+        ul {
+            border: 1px solid blue;
+            padding-left: 40px;
+            display: none;
+        }
+        .active{
+            background-color: gray;
+        }
+        .info-active{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-box">
+        <div class="tags">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+        <div class="content">
+            <ul class="a info-active">
+                <li><a>1</a></li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+            <ul class="b">
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+            </ul>
+            <ul class="c">
+                <li>3</li>
+                <li>3</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let tags=document.querySelectorAll('.tags span')
+        let uls=document.querySelectorAll('.content ul')
+        for(let i=0;i<tags.length;i++){
+            tags[i].addEventListener('click',function(){
+                for(let j=0;j<tags.length;j++){
+                    tags[j].classList.remove('active')
+                    uls[j].classList.remove('info-active')
+                }
+                tags[i].classList.add('active')
+                uls[i].classList.add('info-active')
+            })
+        }
+        
+
+    </script>
+</body>
+
+</html>
